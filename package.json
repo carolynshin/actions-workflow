@@ -1,14 +1,13 @@
 {
   "name": "my-app",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "@octokit/rest": "^16.15.0",
     "ejs": "^2.6.1",
-    "express": "~4.16.0"
+    "express": "~4.16.0",
+    "node": "^10.15.1"
   },
   "devDependencies": {
     "dotenv": "^6.2.0"
