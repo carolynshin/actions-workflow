@@ -3,8 +3,8 @@
     "name": "actions-workflow-template",
     "public": true,
     "builds": [
-        { "src": "**/*.js", "use": "@now/node-server" },
-        { "src": "**/*.css", "use": "@now/static" }
+        { "src": "index.js", "use": "@now/node-server" },
+        { "src": "public/**/*", "use": "@now/static" }
     ],
     "routes": [
         { "src": "/stylesheets/style.css", "dest": "/public/stylesheets/style.css" },
