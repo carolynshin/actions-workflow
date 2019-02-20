@@ -1,4 +1,6 @@
 {
     "version": 2,
-    "public": true
+    "public": true,
+    "builds": [
+        { "src": "index.js", "use": "@now/node-server" }]
 }

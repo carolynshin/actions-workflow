@@ -1,9 +1,11 @@
+var http = require('http')
 require('dotenv').config()
-var express = require('express')
-var app = express()
+let express = require('express')
+let app = express()
 
 app.use(express.static('public'))
 
+app.set('port', process.env.PORT || 3000)
 app.set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
@@ -14,4 +16,8 @@ app.get('/', function (req, res) {
   }
 })
 
-app.listen(3000)
+let port = process.env.PORT || 3000;
+
+http.createServer(app).listen(app.get('port'), function () {
+  console.log('Express server listening on port ' + app.get('port'))
+})
