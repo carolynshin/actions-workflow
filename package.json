@@ -1,13 +1,10 @@
 {
   "name": "my-app",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "@octokit/rest": "^16.15.0",
-    "@sanalytics/probot-serverless-now": "^1.0.7",
     "ejs": "^2.6.1",
     "express": "~4.16.0"
   },

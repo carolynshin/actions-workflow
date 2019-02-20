@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "name": "actions-workflow-template",
     "public": true,
     "builds": [
         { "src": "index.js", "use": "@now/node" }]
