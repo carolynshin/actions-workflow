@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "~4.16.0"
+    "express": "~4.16.0",
+    "node": "^10.15.1"
   },
   "devDependencies": {
     "dotenv": "^6.2.0"
