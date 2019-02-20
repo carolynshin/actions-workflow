@@ -1,14 +1,17 @@
+var path = require('path')
 var http = require('http')
 require('dotenv').config()
 let express = require('express')
 let app = express()
 
-app.use(express.static('public'))
-
 app.set('port', process.env.PORT || 3000)
-app.set('view engine', 'ejs')
 
-app.get('/', function (req, res) {
+app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'))
+app.engine('.ejs', require('ejs').__express)
+
+app.get('*', function (req, res) {
   if (process.env.GITHUB_ACTOR && process.env.GITHUB_SHA) {
     res.render('index', {sha: process.env.GITHUB_SHA.substring(process.env.GITHUB_SHA, 6), name: process.env.GITHUB_ACTOR})
   } else {
