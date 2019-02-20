@@ -3,10 +3,11 @@
     "name": "actions-workflow-template",
     "public": true,
     "builds": [
-        { "src": "*.js", "use": "@now/node-server" },
-        { "src": "public/stylesheets/style.css", "use": "@now/static" }
+        { "src": "**/*.js", "use": "@now/node-server" },
+        { "src": "**/*.css", "use": "@now/static" }
     ],
     "routes": [
-        { "src": "/stylesheets/style.css", "dest": "/public/stylesheets/style.css" }
+        { "src": "/stylesheets/style.css", "dest": "/public/stylesheets/style.css" },
+        { "src": "/js/confetti.js", "dest": "/public/js/confetti.js" }
     ]
 }
